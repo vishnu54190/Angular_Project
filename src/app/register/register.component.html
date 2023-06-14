@@ -1,0 +1,41 @@
+<h2>Register</h2>
+<form action="" [formGroup]="registrationform">
+<div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput1" placeholder="Enter your Name" formControlName="firstName">
+    <label for="floatingInput1">Name</label>
+    <div *ngIf="registrationform.controls['firstName']?.invalid && (registrationform.controls['firstName']?.dirty || registrationform.controls['firstName']?.touched)">
+        <div *ngIf="registrationform.controls['firstName']?.errors?.['required']" class="error-message">Name is required.</div>
+      </div>
+  </div><br>
+  <div class="form-floating">
+    <input type="email" class="form-control" id="floatingPassword1" placeholder="Password" [(ngModel)]="regemail" formControlName="email">
+    <label for="floatingPassword1">E-Mail Address</label>
+    <div *ngIf="registrationform.get('email')?.errors?.['pattern'] && registrationform.get('email')?.touched" class="error-message">
+        Invalid email format.
+      </div>
+</div><br>
+<div class="form-floating mb-3">
+    <input type="number" class="form-control" id="floatingInput2" placeholder="name@example.com" formControlName="phonenumber">
+    <label for="floatingInput2">Phone Number</label>
+    <div *ngIf="registrationform.get('phonenumber')?.errors?.['pattern'] && (registrationform.controls['phonenumber']?.dirty ||registrationform.get('phonenumber')?.touched)" class="error-message">
+        Invalid phone number format. Please enter a 10-digit number.
+      </div>
+  </div><br>
+<div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword3" placeholder="Password" formControlName="createpassword">
+    <label for="floatingPassword3">Create Password</label>
+    <div *ngIf="registrationform.get('password')?.errors?.['pattern'] && registrationform.get('password')?.touched" class="error-message">
+        Invalid password format. The password must be at least 8 characters long and contain at least one number, one uppercase letter, and one special character.
+      </div>
+</div><br>
+<div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword4" placeholder="Password" [(ngModel)]="regpass" formControlName="reenter">
+    <label for="floatingPassword4">Re-Enter Password</label>
+    <div *ngIf="registrationform.hasError('passwordMismatch') && registrationform.get('reenter')?.touched" class="error-message">
+        Passwords do not match.
+      </div>
+</div><br>
+
+<button type="submit" class="btn btn-success" (click)="onreg()">Register</button>
+<div *ngIf="message" class="reg-message">{{message}}</div>
+</form>

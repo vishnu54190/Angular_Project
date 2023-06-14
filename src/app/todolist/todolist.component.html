@@ -1,0 +1,36 @@
+<button type="button" class="btn btn-success" (click)="getall()">Get All</button><br>
+<h2>Your TODO List</h2>
+
+<table class="table-success table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    <tr *ngFor="let item of hotel">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+
+    </tr>
+
+</table><br>
+
+<h4>Add a TODO Task</h4>
+<div class="form-floating mb-2">
+    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="titleinput">
+    <label for="floatingInput">Title</label>
+</div><br>
+<div class="form-floating">
+    <textarea class="form-control" placeholder="Write Description" id="floatingTextarea2" style="height: 100px" [(ngModel)]="descinput"></textarea>
+    <label for="floatingTextarea2">Description</label>
+</div><br>
+<button type="button" class="btn btn-success" (click)="addtaskk()">Add</button><br>
+<div *ngIf="success" class="success-message">{{success}}</div>
+<h4>Delete a TODO Task</h4>
+<div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="deltitleinput">
+    <label for="floatingInput">Title</label>
+</div>
+<button type="button" class="btn btn-danger" (click)="ondelete()">Delete</button><br>
+<div *ngIf="deleted" class="del-message">{{deleted}}</div>

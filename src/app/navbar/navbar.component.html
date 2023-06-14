@@ -1,0 +1,123 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signin">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/todo">My TODO List</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel wrapper -->
+<div
+id="carouselBasicExample"
+class="carousel slide carousel-fade"
+data-mdb-ride="carousel"
+>
+<!-- Indicators -->
+<div class="carousel-indicators">
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="0"
+    class="active"
+    aria-current="true"
+    aria-label="Slide 1"
+  ></button>
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="1"
+    aria-label="Slide 2"
+  ></button>
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="2"
+    aria-label="Slide 3"
+  ></button>
+</div>
+
+<!-- Inner -->
+<div class="carousel-inner" id="firstslide">
+  <!-- Single item -->
+  <div class="carousel-item active">
+    <img
+      src="assets/0x0.jpg"
+      class="d-block w-100"
+      alt="Sunset Over the City"
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>First slide label</h5>
+      <p>
+        This is a todo list website.
+      </p>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item" id="secondslide">
+    <img
+      src="assets/todo.jpg"
+      class="d-block w-100"
+      alt="Canyon at Nigh"
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Second slide label</h5>
+      <p>
+        Add and delete your day to day tasks.
+      </p>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item" id="thirdslide">
+    <img
+      src="src/todo2.jpg"
+      class="d-block w-100"
+      alt="Cliff Above a Stormy Sea"
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Third slide label</h5>
+      <p>
+        You have to register and then login.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Inner -->
+
+<!-- Controls -->
+<button
+  class="carousel-control-prev"
+  type="button"
+  data-mdb-target="#firstslide"
+  data-mdb-slide="prev"
+>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button
+  class="carousel-control-next"
+  type="button"
+  data-mdb-target="#secondslide"
+  data-mdb-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+<!-- Carousel wrapper -->
+  

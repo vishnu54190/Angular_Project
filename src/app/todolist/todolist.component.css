@@ -1,0 +1,9 @@
+table,td,th{
+    border: 2px solid black;
+}
+.success-message{
+    color: green;
+}
+.del-message{
+    color:red;
+}
